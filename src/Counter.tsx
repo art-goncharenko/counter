@@ -85,7 +85,7 @@ return (
             <div className="counter-wrap">
                 <div className="counter">
                     <div className={"count " + (count === maxValue ? "error" : "")}>{count}</div>
-                    {/*syntax for conditional+regular className*/}
+                    {/*syntax for "regular" + (conditional className)*/}
                     <p>{message()}</p>
                     <div className="btn-wrap">
                         <button onClick={onClickIncrement}
