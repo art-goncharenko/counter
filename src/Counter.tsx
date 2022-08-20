@@ -3,7 +3,7 @@ import "./Counter.css";
 
 export const Counter = () => {
     const [count, setCount] = useState<number>(0);
-    const [maxValue, setMaxValue] = useState<number>(7);
+    const [maxValue, setMaxValue] = useState<number>(3);
     const [startValue, setStartValue] = useState(0);
     const [isSetDisabled, setIsSetDisabled] = useState<boolean>(true)
 
