@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    height: 300px;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    gap : 10px;
+}
+
+.values-wrap, .counter-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.values, .counter  {
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 10px;
+}
+.count {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+
+.count.error {
+    color: red;
+}
+.max-value, .start-value, .btn-wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 5px;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid blue;
+    padding: 1em;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.counter-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    margin: 5px 10px;
+}
+
+input {
+   background-color: lightblue;
+}
+
+input.error {
+    border: 1px solid red;
+    background-color: orange;
+}
