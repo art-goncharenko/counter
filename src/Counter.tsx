@@ -40,17 +40,18 @@ export const Counter = () => {
         setIsSetDisabled(true)
     }
     const addClassName = `${maxValue <= startValue ? "error" : ""}`
+    const addClassNameMessage = `${maxValue <= startValue || startValue < 0 ? "error" : ""}`
     const message = () => {
         if (maxValue <= startValue) {
             return "Max value has to be bigger than start value";
-        } else if (startValue <=  0) {
+        } else if (startValue <  0) {
             return "Incorrect value!"
         } else {
             return "Enter values and click Set";
         }
     }
     const btnSetDisabled = () => {
-        if (startValue <= 0) {
+        if (startValue < 0) {
             return setIsSetDisabled(true)
         } else if (maxValue <= startValue) {
             return setIsSetDisabled(true)
@@ -67,12 +68,12 @@ return (
                 <div className="values">
                     <div className="max-value">
                         <div>Max value:</div>
-                        <input type={"number"} value={maxValue} onChange={onChangeHandlerMax} name="maxValue"
+                        <input type="number" value={maxValue} onChange={onChangeHandlerMax} name="maxValue"
                                className={addClassName}/>
                     </div>
                     <div className="start-value">
                         <div>Start value</div>
-                        <input type={"number"} value={startValue} onChange={onChangeHandlerStart} name="minValue"
+                        <input type="number" value={startValue} onChange={onChangeHandlerStart} name="minValue"
                                className={addClassName}/>
                     </div>
                 </div>
@@ -86,7 +87,7 @@ return (
                 <div className="counter">
                     <div className={"count " + (count === maxValue ? "error" : "")}>{count}</div>
                     {/*syntax for "regular" + (conditional className)*/}
-                    <p>{message()}</p>
+                    <p className={addClassNameMessage}>{message()}</p>
                     <div className="btn-wrap">
                         <button onClick={onClickIncrement}
                                 disabled={count === maxValue}>Inc
